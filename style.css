@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+.cars_container {
+    position: relative;
+    height: 100px;
+    max-width: 1200px;
+    margin: 250px auto 0;
+}
+
+.left_car {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    animation: leftAnim 5s linear 0.5s infinite alternate;
+}
+
+.left_car img {
+    display: block;
+    width: 100%;
+}
+
+.right_car {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation: rightAnim 5s linear 0.5s infinite alternate;
+}
+
+.right_car img {
+    display: block;
+    width: 100%;
+}
+
+@keyframes leftAnim {
+    0% {
+        left: 0;
+    }
+
+    35% {
+        left: 180px;
+    }
+
+    65% {
+        left: 250px;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        left: 400px;
+        background-color: crimson;
+    }
+}
+
+
+@keyframes rightAnim {
+    0% {
+        right: 0;
+    }
+
+    30% {
+        right: 150px;
+    }
+
+    50% {
+        right: 220px;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        right: 400px;
+        background-color: crimson;
+    }
+}
+
